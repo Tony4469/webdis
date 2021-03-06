@@ -11,7 +11,7 @@ cat <<EOF > "$config_file"
    "verbosity" : 6,
    "logfile" : "/tmp/webdis.log",
    "redis_port" : 10000,
-   "redis_host" : "redis-e7fz",
+   "redis_host" : "redis://redis-e7fz",
    "http_port" : ${PORT:-7379},
    "redis_auth" : null,
    "websockets" : false,
