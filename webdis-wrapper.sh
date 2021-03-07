@@ -5,7 +5,7 @@ config_file=$tmp_dir/webdis.json
 
 cat <<EOF > "$config_file"
   {
-   "redis_auth" : ["soufiane", "soufiane:8critique-plonger-soldate-5relief-4touristes-7coup-8chaleur-touche9-insomnie--batterie6!"],
+   "redis_auth" : ["soufiane", "test"],
    "acl" : [{ 
      "http_basic_auth": "user:password1", 
      "enabled": ["GET", "SET", "DEL"] 
