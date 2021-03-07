@@ -13,7 +13,7 @@ cat <<EOF > "$config_file"
    "redis_port" : ${REDIS_PORT:-6379},
    "redis_host" : "${REDIS_HOST:-localhost}",
    "http_port" : ${PORT:-7379},
-   "redis_auth" : "8critique!-4plongée&-1soldaté-5relief'-4touristes(-7coup(-8chaleur§-touche9ç-insomnie3--batterie6+",
+   "redis_auth" : ["soufiane", "8critique!-4plongée&-1soldaté-5relief'-4touristes(-7coup(-8chaleur§-touche9ç-insomnie3--batterie6+"],
    "websockets" : false,
    "threads" : 5,
    "pool_size" : 20,
