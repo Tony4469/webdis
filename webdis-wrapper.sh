@@ -5,18 +5,6 @@ config_file=$tmp_dir/webdis.json
 
 cat <<EOF > "$config_file"
   {
-   "redis_auth" : "test:test",
-   "acl" : [
-        {
-            "disabled": ["*"]
-        },
-
-        {
-            "http_basic_auth": "user:password",
-            "enabled": ["DEBUG"]
-        }
-    ],
-
    "daemonize" : false,
    "database" : 0,
    "http_host" : "0.0.0.0",
@@ -25,9 +13,23 @@ cat <<EOF > "$config_file"
    "redis_port" : ${REDIS_PORT:-6379},
    "redis_host" : "${REDIS_HOST:-localhost}",
    "http_port" : ${PORT:-7379},
+   "redis_auth" : "test:test",
    "websockets" : false,
    "threads" : 5,
-   "pool_size" : 20
+   "pool_size" : 20,
+   "acl" : [
+      {
+         "disabled" : [
+            "DEBUG"
+         ]
+      },
+      {
+         "http_basic_auth" : "user:password",
+         "enabled" : [
+            "DEBUG"
+         ]
+      }
+   ]
 }
 EOF
 
