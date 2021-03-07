@@ -5,11 +5,34 @@ config_file=$tmp_dir/webdis.json
 
 cat <<EOF > "$config_file"
   {
-   "redis_auth" : ["soufiane", "test"],
-   "acl" : [{ 
-     "http_basic_auth": "user:password1", 
-     "enabled": ["GET", "SET", "DEL"] 
-   }],
+   "redis_auth" : "test:test",
+   "acl" : [
+        {
+            "disabled":    ["BGREWRITEAOF",
+                     "BGSAVE",
+                     "CLIENT",
+                     "COMMAND",
+                     "CONFIG",
+                     "DBSIZE",
+                     "DEBUG",
+                     "FLUSHALL",
+                     "FLUSHDB",
+                     "INFO",
+                     "MONITOR",
+                     "ROLE",
+                     "SAVE",
+                     "SHUTDOWN",
+                     "SLAVEOF",
+                     "SLOWLOG",
+                     "SYNC",
+                     "CLUSTER"]
+        },
+
+        {
+            "http_basic_auth":    "user:password",
+            "enabled":        []
+        }
+    ],
    "daemonize" : false,
    "database" : 0,
    "http_host" : "0.0.0.0",
