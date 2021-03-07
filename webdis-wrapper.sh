@@ -17,16 +17,10 @@ cat <<EOF > "$config_file"
    "websockets" : false,
    "threads" : 5,
    "pool_size" : 20,
-   "acl" : [
-      {
-         "disabled" : [
-            "DEBUG"
-         ]
-      },
-      {
-        "http_basic_auth" : "user:password"
-      }
-   ]
+   "acl" : { 
+     "http_basic_auth": "user:password1", 
+     "enabled": ["GET", "SET", "DEL"] 
+  }
 }
 EOF
 
