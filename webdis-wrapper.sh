@@ -24,10 +24,7 @@ cat <<EOF > "$config_file"
          ]
       },
       {
-         "http_basic_auth" : "user:password",
-         "enabled" : [
-            "DEBUG"
-         ]
+        "http_basic_auth" : "user:password"
       }
    ]
 }
