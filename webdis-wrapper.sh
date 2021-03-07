@@ -23,7 +23,7 @@ cat <<EOF > "$config_file"
       },
       {
          "http_basic_auth" : "test:test",
-         "enabled": ["GET", "SET"]
+         "enabled": ["GET", "SET", "PING"]
       }
    ]
 }
