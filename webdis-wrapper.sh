@@ -22,7 +22,8 @@ cat <<EOF > "$config_file"
          "disabled" : ["*"]
       },
       {
-         "http_basic_auth" : "user:password"
+         "http_basic_auth" : "user:password",
+         "enabled": ["*"]
       }
    ]
 }
