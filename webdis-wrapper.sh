@@ -23,7 +23,7 @@ cat <<EOF > "$config_file"
       },
       {
          "http_basic_auth" : "user:password",
-         "enabled": ["PUBLISH"]
+         "enabled": ["GET", "PUBLISH"]
       }
    ]
 }
