@@ -19,15 +19,11 @@ cat <<EOF > "$config_file"
    "pool_size" : 20,
    "acl" : [
       {
-         "disabled" : [
-            "DEBUG"
-         ]
+         "disabled" : ["*"]
       },
       {
-         "http_basic_auth" : "user:password",
-         "enabled" : [
-            "DEBUG"
-         ]
+         "http_basic_auth" : "test:test123",
+         "enabled": ["PUBLISH"]
       }
    ]
 }
