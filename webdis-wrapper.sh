@@ -13,7 +13,7 @@ cat <<EOF > "$config_file"
    "redis_port" : ${REDIS_PORT:-6379},
    "redis_host" : "${REDIS_HOST:-localhost}",
    "http_port" : ${PORT:-7379},
-   "redis_auth" : "test:test",
+   "redis_auth" : "test:test123",
    "websockets" : false,
    "threads" : 5,
    "pool_size" : 20,
