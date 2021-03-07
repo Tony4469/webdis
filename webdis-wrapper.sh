@@ -8,31 +8,15 @@ cat <<EOF > "$config_file"
    "redis_auth" : "test:test",
    "acl" : [
         {
-            "disabled":    ["BGREWRITEAOF",
-                     "BGSAVE",
-                     "CLIENT",
-                     "COMMAND",
-                     "CONFIG",
-                     "DBSIZE",
-                     "DEBUG",
-                     "FLUSHALL",
-                     "FLUSHDB",
-                     "INFO",
-                     "MONITOR",
-                     "ROLE",
-                     "SAVE",
-                     "SHUTDOWN",
-                     "SLAVEOF",
-                     "SLOWLOG",
-                     "SYNC",
-                     "CLUSTER"]
+            "disabled": ["*"]
         },
 
         {
-            "http_basic_auth":    "user:password",
-            "enabled":        []
+            "http_basic_auth": "user:password",
+            "enabled": ["DEBUG"]
         }
     ],
+
    "daemonize" : false,
    "database" : 0,
    "http_host" : "0.0.0.0",
