@@ -23,7 +23,7 @@ cat <<EOF > "$config_file"
       },
       {
          "http_basic_auth" : "${USER:-user}:${PASSWORD:-password}",
-         "enabled": ["GET", "SET", "PING"]
+         "enabled": ["GET", "SET", "DEL", "PING"]
       }
    ]
 }
